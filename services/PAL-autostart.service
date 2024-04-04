@@ -1,0 +1,12 @@
+[Unit]
+Description=Autostart all registered PAL instances
+Requires=MEGAcmd-autostart.service
+After=MEGAcmd-autostart.service
+ 
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/bash -c 'exec $HOME/.config/PAL/control/PAL-init.sh'
+KillMode=process
+
+[Install]
+WantedBy=default.target

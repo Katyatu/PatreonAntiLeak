@@ -1,0 +1,12 @@
+[Unit]
+Description=Autostart the MEGAcmd server
+Requires=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/mega-cmd-server
+Restart=always
+
+[Install]
+WantedBy=default.target
