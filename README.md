@@ -39,6 +39,10 @@ With the completion of <ins>PAL v1.0</ins>, I will be more focused on documentat
 - [ ] Example GIF
 - [ ] Idiot-proof & make everything zero knowledge user friendly
 
+Planned for <ins>PAL v1.1</ins>:
+- [ ] Add option to separate encryption key from share link to break automated MEGA scraping
+- [ ] Add operation to change encryption key of an instance's assigned folder
+
 ## Targeted System Setup:
 
 - **Hardware:** [Raspberry Pi Zero 2 W](https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/)
