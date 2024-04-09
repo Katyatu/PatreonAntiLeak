@@ -6,7 +6,7 @@ This solution utilizes the cloud drive platform [MEGA](https://mega.io/), [Disco
 
 Until Patreon releases a public API where one could programmatically edit Patreon posts, Discord is a required middleman for now.
 
-## Methodology
+## Methodology:
 
 > "In every chain of reasoning, the evidence of the last conclusion can be no greater than that of the weakest link of the chain, whatever may be the strength of the rest." - Thomas Reid's Essays on the Intellectual Powers of Man, 1786
 
@@ -20,12 +20,52 @@ A bank!
 
 Using this methodology, leaking URLs is rendered largely pointless, as any leaked URLs would be quickly invalidated per the set key rotation period.
 
-<div align="right"><a href="https://github.com/Katyatu/PatreonAntiLeak/wiki/Methodology">Read More &#10137;</a></div>
+<details>
+<summary align="right">Read More...</summary>
 
-## Concept Flowcharts
+So, by rotating keys in a frequent enough manner...
+
+1. Discord admins have the ability to track down leaker accounts, and ban them for TOS violations while not having to issue a refund.
+2. Any human leakers would stop trying to leak as they would be required to sit at their computer 24/7 (even basement dwellers have limits).
+3. Any individual bot leakers would repeatedly risk exposing themselves violating TOS, eventually leading to a banned account via Discord admin investigation and no refund. Thus, discouraging any individual from repeated attempts as the cost alone to leak for free would **really** start to add up, on top of all prior efforts being wasted as URLs are regularly invalidated.
+   > **Note:**  
+   > This point is only valid if your tier pricing and frequency of pursuing leakers is set up in a way where the cost/risk isn't worth the reward in the event of being banned. ie. $1 access for everything = low cost per ban, little deterrence; vs. $1 for basic, $5 for most, $10 for everything = high cost per ban; high deterrence. You'll just have to gauge for yourself what the sweet spot for pricing is; too cheap = higher chance of leaking, too expensive = less customers. In addition, it is advised you have trusted community members publically help you monitor leaker events for further deterrence, ie. have a dedicated wall of shame w/ ban counter.
+4. Any public archivers would have to increase their archiving visit frequency by many factors, which would require more server resources than any public achiever owner would want to invest in.
+
+An arbitrary example in order for a public archiver to keep up-to-date, in the time period of a week:
+
+| # of Accounts<br/>to Scrape | PAL Key Rotation<br/>Frequency | Total Scrapes / week | Total Time to Complete<br/>(10 scrapes / second) |                        Verdict                        |
+| :-------------------------: | :----------------------------: | :------------------: | :----------------------------------------------: | :---------------------------------------------------: |
+|           100,000           |         (unprotected)          |    100,000 / week    |                  10,000 seconds                  |          ~2.8 hours < 168 hours<br/>Feasible          |
+|           100,000           |           Every day            |    700,000 / week    |                  70,000 seconds                  |         ~19.4 hours < 168 hours<br/>Feasible          |
+|           100,000           |           Every hour           |  16,800,000 / week   |                1,680,000 seconds                 |    ~467 hours &#8816; 168 hours<br/>**Too costly**    |
+|           100,000           |        Every 15 minutes        |  67,200,000 / week   |                6,720,000 seconds                 | ~4 weeks &#8816; 1 week<br/>**Not remotely feasible** |
+
+So, unless you are apart of the world's most famous Patreon creators where the incessant scraping is somehow financially worth it, public archiver leaks will always be outdated when PAL is deployed.
+
+> **Please note that:**  
+> PAL isn't designed to prevent piracy, ie. people who download from your vault and reupload to another distribution network. Conceptually speaking, it's impossible to prevent a 0-cost-infinitely-duplicatable digital good from being unlawfully distributed without having 100% complete control over society. The best you can do is making it as much of a pain in the ass as possible for illicit activity to take place, leaving only the "I'd rather die than pay you." people to roll in the mud while upstanding citizens exchange their money for your goods and services. You'll just have to keep an eye out and file a DMCA Takedown if you catch wind of any file sharing site hosting your work without permission, and then purge the leaker from your Discord.
+
+</details>
+
+## Concept Flowcharts:
 
 <details>
-<summary><u>[Click]</u> How a local installation of PAL works</summary>
+<summary>Access to your Patreon content by default</summary>
+
+![PatreonAntiLeak logo](/resources/Without-PAL.png)
+
+</details><br/>
+
+<details>
+<summary>Access to your Patreon content under PAL's protection</summary>
+
+![PatreonAntiLeak logo](/resources/With-PAL.png)
+
+</details><br/>
+
+<details>
+<summary>What PAL does when executed</summary>
 
 ![PatreonAntiLeak logo](/resources/PAL-Process.png)
 
@@ -40,6 +80,7 @@ With the completion of <ins>PAL v1.0</ins>, I will be more focused on documentat
 - [ ] Idiot-proof & make everything zero knowledge user friendly
 
 Planned for <ins>PAL v1.1</ins>:
+
 - [ ] Add option to separate encryption key from share link to break automated MEGA scraping
 - [ ] Add operation to change encryption key of an instance's assigned folder
 
@@ -130,6 +171,17 @@ Once this setting is set, and you have fully set up your local PAL instances, it
 #### Running
 
     PAL-manager
+
+<hr/>
+
+#### Troubleshooting: Force uninstall
+
+If you happen to find yourself in a situation where you are unable to access the PAL-manager, and the installation script won't run due to an existing PAL installation, run the following command:
+
+    wget -q https://raw.githubusercontent.com/Katyatu/PatreonAntiLeak/main/scripts/PAL-uninstaller.sh &&      # Fetch uninstaller script from here \
+    chmod +x PAL-uninstaller.sh &&     # Make uninstaller script executable \
+    ./PAL-uninstaller.sh &&            # Run uninstaller script \
+    rm PAL-uninstaller.sh              # Delete uninstaller script
 
 ## Disclaimer:
 
