@@ -88,10 +88,10 @@ Planned for <ins>PAL v1.1</ins>:
 
 - **Hardware:** [Raspberry Pi Zero 2 W](https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/)
 
-  > Shopping Guide (wip): [here](https://github.com/Katyatu/PatreonAntiLeak/wiki/Shopping-Guide)
+  > Shopping Guide: [here](https://github.com/Katyatu/PatreonAntiLeak/wiki/Shopping-Guide)
 
 - **OS:** [Raspberry Pi OS Lite (64bit) - Debian 12](https://downloads.raspberrypi.com/raspios_lite_arm64/images/raspios_lite_arm64-2024-03-15/2024-03-15-raspios-bookworm-arm64-lite.img.xz)
-  > RPiOS Install Guide: [here](https://www.raspberrypi.com/documentation/computers/getting-started.html)
+  > Setup Guide: [here](https://github.com/Katyatu/PatreonAntiLeak/wiki/Raspberry-Pi-OS-Setup)
 
 ## External Requirements:
 
