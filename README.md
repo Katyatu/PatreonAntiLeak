@@ -18,10 +18,10 @@ A bank!
 - **MEGA** serves as the vault itself.
 - **PAL** serves as an automated system of rotating vault keys under the discretion of the bank manager.<br/>(ie. invalidating potentially leaked keys and keeping authorized key holders up-to-date with the latest key)
 
-Using this methodology, leaking URLs is rendered largely pointless, as any leaked URLs would be quickly invalidated per the set key rotation period.
-
 <details>
-<summary align="right">Read More...</summary>
+<summary align="right">Click here for more in-depth detail.</summary>
+<br/>
+Using this methodology, leaking URLs is rendered largely pointless, as any leaked URLs would be quickly invalidated per the set key rotation period.
 
 So, by rotating keys in a frequent enough manner...
 
@@ -29,7 +29,7 @@ So, by rotating keys in a frequent enough manner...
 2. Any human leakers would stop trying to leak as they would be required to sit at their computer 24/7 (even basement dwellers have limits).
 3. Any individual bot leakers would repeatedly risk exposing themselves violating TOS, eventually leading to a banned account via Discord admin investigation and no refund. Thus, discouraging any individual from repeated attempts as the cost alone to leak for free would **really** start to add up, on top of all prior efforts being wasted as URLs are regularly invalidated.
    > **Note:**  
-   > This point is only valid if your tier pricing and frequency of pursuing leakers is set up in a way where the cost/risk isn't worth the reward in the event of being banned. ie. $1 access for everything = low cost per ban, little deterrence; vs. $1 for basic, $5 for most, $10 for everything = high cost per ban; high deterrence. You'll just have to gauge for yourself what the sweet spot for pricing is; too cheap = higher chance of leaking, too expensive = less customers. In addition, it is advised you have trusted community members publically help you monitor leaker events for further deterrence, ie. have a dedicated wall of shame w/ ban counter.
+   > This point is only valid if your tier pricing and frequency of pursuing leakers is set up in a way where the cost/risk isn't worth the reward in the event of being banned. It is advised you have trusted community members publically help you monitor internally and externally for leaker events.
 4. Any public archivers would have to increase their archiving visit frequency by many factors, which would require more server resources than any public achiever owner would want to invest in.
 
 An arbitrary example in order for a public archiver to keep up-to-date, in the time period of a week:
@@ -39,36 +39,32 @@ An arbitrary example in order for a public archiver to keep up-to-date, in the t
 |           100,000           |         (unprotected)          |    100,000 / week    |                  10,000 seconds                  |          ~2.8 hours < 168 hours<br/>Feasible          |
 |           100,000           |           Every day            |    700,000 / week    |                  70,000 seconds                  |         ~19.4 hours < 168 hours<br/>Feasible          |
 |           100,000           |           Every hour           |  16,800,000 / week   |                1,680,000 seconds                 |    ~467 hours &#8816; 168 hours<br/>**Too costly**    |
-|           100,000           |        Every 15 minutes        |  67,200,000 / week   |                6,720,000 seconds                 | ~4 weeks &#8816; 1 week<br/>**Not remotely feasible** |
 
 So, unless you are apart of the world's most famous Patreon creators where the incessant scraping is somehow financially worth it, public archiver leaks will always be outdated when PAL is deployed.
 
-> **Please note that:**  
-> PAL isn't designed to prevent piracy, ie. people who download from your vault and reupload to another distribution network. Conceptually speaking, it's impossible to prevent a 0-cost-infinitely-duplicatable digital good from being unlawfully distributed without having 100% complete control over society. The best you can do is making it as much of a pain in the ass as possible for illicit activity to take place, leaving only the "I'd rather die than pay you." people to roll in the mud while upstanding citizens exchange their money for your goods and services. You'll just have to keep an eye out and file a DMCA Takedown if you catch wind of any file sharing site hosting your work without permission, and then purge the leaker from your Discord.
 
-</details>
-
-## Concept Flowcharts:
+### Concept Flowcharts:
 
 <details>
 <summary>Access to your Patreon content by default</summary>
 
 ![PatreonAntiLeak logo](/resources/Without-PAL.png)
 
-</details><br/>
+</details>
 
 <details>
 <summary>Access to your Patreon content under PAL's protection</summary>
 
 ![PatreonAntiLeak logo](/resources/With-PAL.png)
 
-</details><br/>
+</details>
 
 <details>
 <summary>What PAL does when executed</summary>
 
 ![PatreonAntiLeak logo](/resources/PAL-Process.png)
 
+</details>
 </details>
 
 ## To Do:
@@ -86,29 +82,34 @@ Planned for <ins>PAL v1.1</ins>:
 
 ## Targeted System Setup:
 
-- **Hardware:** [Raspberry Pi Zero 2 W](https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/)
+**Hardware:** [Raspberry Pi Zero 2 W](https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/) 
 
-  > Shopping Guide: [here](https://github.com/Katyatu/PatreonAntiLeak/wiki/Shopping-Guide)
+**OS:** [Raspberry Pi OS Lite (64bit) - Debian 12](https://downloads.raspberrypi.com/raspios_lite_arm64/images/raspios_lite_arm64-2024-03-15/2024-03-15-raspios-bookworm-arm64-lite.img.xz)
 
-- **OS:** [Raspberry Pi OS Lite (64bit) - Debian 12](https://downloads.raspberrypi.com/raspios_lite_arm64/images/raspios_lite_arm64-2024-03-15/2024-03-15-raspios-bookworm-arm64-lite.img.xz)
-  > Setup Guide: [here](https://github.com/Katyatu/PatreonAntiLeak/wiki/Raspberry-Pi-OS-Setup)
+> [!TIP] 
+> Shopping Guide: [here](https://github.com/Katyatu/PatreonAntiLeak/wiki/Shopping-Guide)  
+> Setup Guide (wip): [here](https://github.com/Katyatu/PatreonAntiLeak/wiki/Raspberry-Pi-OS-Setup)
 
 ## External Requirements:
 
 1. A [registered account with MEGA](https://mega.nz/register) that will serve as the vault to your digital work.
 
-   > Free accounts start at 20GB, with up to 16TB paid storage.  
-   > Pricing: [here](https://mega.io/pricing) | Privacy Policy: [here](https://tosdr.org/en/service/306)
-
 2. A [Discord](https://discord.com/) server with dedicated channels that will serve as the gateway to your vault.
-
-   > 'Tier 1' channel, that will contain a link (handled by PAL) to the 'Tier 1' folder on your MEGA drive.  
-   > 'Tier 2' channel, that will contain a link (handled by PAL) to the 'Tier 2' folder on your MEGA drive.  
-   > 'Tier \_' ... etc.
 
 3. A Discord Webhook Bot per dedicated channel inside of your Discord server, already created and assigned to the appropriate cooresponding channel.
 
-   > Discord Webhook Documentation: [here](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks)
+> [!TIP]  
+> Free MEGA accounts start at 20GB, with up to 16TB paid storage.  
+> Pricing: [here](https://mega.io/pricing) | Privacy Policy: [here](https://tosdr.org/en/service/306)
+> <hr/>
+>
+> An example of how a Discord server would set up the dedicated channels:  
+> - 'Tier 1' channel, that will contain a link (handled by PAL) to the 'Tier 1' folder on your MEGA drive.  
+> - 'Tier 2' channel, that will contain a link (handled by PAL) to the 'Tier 2' folder on your MEGA drive.  
+> - 'Tier \_' ... etc.
+> <hr/>
+>
+> Discord Webhook Documentation: [here](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks)
 
 ## Usage:
 
@@ -119,6 +120,7 @@ Planned for <ins>PAL v1.1</ins>:
     sudo apt -y install jq &&       # Install jq Command-line JSON processor \
     sudo apt -y install megacmd     # Install MEGA's Command-line tool
 
+> [!IMPORTANT]
 > If you get an "E: Unable to locate package megacmd", you are missing MEGA's repository.
 >
 > If you are using the **Targeted System Setup**, run the following command:
@@ -131,7 +133,16 @@ Planned for <ins>PAL v1.1</ins>:
 
 <hr/>
 
-#### Log into MEGAcmd (PAL prerequisite)
+#### Installing PAL
+
+    wget -q https://raw.githubusercontent.com/Katyatu/PatreonAntiLeak/main/scripts/PAL-installer.sh &&     # Fetch installer script from here \
+    chmod +x PAL-installer.sh &&     # Make installer script executable \
+    ./PAL-installer.sh &&            # Run installer script \
+    rm PAL-installer.sh              # Delete installer script
+
+<hr/>
+
+#### Log into MEGAcmd (PAL-manager prerequisite)
 
 You have two ways to do this, pick one, both achieve the same result:
 
@@ -149,12 +160,9 @@ You have two ways to do this, pick one, both achieve the same result:
 
 <hr/>
 
-#### Installing PAL
+#### Running
 
-    wget -q https://raw.githubusercontent.com/Katyatu/PatreonAntiLeak/main/scripts/PAL-installer.sh &&     # Fetch installer script from here \
-    chmod +x PAL-installer.sh &&     # Make installer script executable \
-    ./PAL-installer.sh &&            # Run installer script \
-    rm PAL-installer.sh              # Delete installer script
+    PAL-manager
 
 <hr/>
 
@@ -168,12 +176,6 @@ Once this setting is set, and you have fully set up your local PAL instances, it
 
 <hr/>
 
-#### Running
-
-    PAL-manager
-
-<hr/>
-
 #### Troubleshooting: Force uninstall
 
 If you happen to find yourself in a situation where you are unable to access the PAL-manager, and the installation script won't run due to an existing PAL installation, run the following command:
@@ -183,20 +185,26 @@ If you happen to find yourself in a situation where you are unable to access the
     ./PAL-uninstaller.sh &&            # Run uninstaller script \
     rm PAL-uninstaller.sh              # Delete uninstaller script
 
+> [!CAUTION]
+> This is essentially a hard reset of PAL, you will lose all configurations and will be starting over from a fresh installation.
+
 ## Disclaimer:
 
-Since PAL is written purely in GNU's Bourne Again SHell, modifying your local PAL installation is possible. However, any degree of modification voids the privilege of you being able to open issues and/or complain. This repository will only be focused on the official version of PAL.
-
-If you made a mod, have thoroughly tested it, and think it would serve as a respectable addition to the official PAL, you may post a request containing your code for me to review. Just don't get your hopes up.
-
-There may be fringe cases where unexpected errors happen, I try my best to account for every possible scenario and handle them accordingly. If I happen to miss one, let me know and I'll get it fixed asap.
-
-This project was born from the behest of some friends of mine who use Patreon and have complained about leakers / public archivers hurting their business. Also I couldn't sleep for \*\*\*\* one night and was feeling productive at the time.
-
-## Legal Disclaimer:
-
-I am not affiliated with any of the services mentioned within this project whatsoever.
+> [!IMPORTANT]  
+> * PAL isn't designed to prevent piracy, ie. people who download from your vault and reupload to another distribution network. Conceptually speaking, it's impossible to prevent a 0-cost-infinitely-duplicatable digital good from being unlawfully distributed without having 100% complete control over people. The best you can do is making it as much of a pain in the ass as possible for illicit activity to take place, leaving only the "I'd rather die than pay you." people to spend the extra time out of their sad lives trying to circumvent your security. You'll just have to keep an eye out and file a DMCA Takedown if you catch wind of any file sharing site hosting your work without permission, and then purge the leaker from your Discord.
+>
+> * Since PAL is written purely in GNU's Bourne Again SHell, modifying your local PAL installation is possible. However, any degree of modification voids your privilege of being able to open issues and/or complain. This repository will only be focused on the official version of PAL.
+>   
+> * If you made a mod, have thoroughly tested it, and think it would serve as a respectable addition to the official PAL, you may post a feature request containing your code for me to review. Just don't get your hopes up.
+>   
+> * There may be fringe cases where unexpected errors happen, I try my best to account for every possible scenario and handle them accordingly. If I happen to miss one, let me know and I'll get it fixed asap.
+>   
+> * I am not affiliated with any of the services mentioned within this project whatsoever.
+>   
+> * This project was born from the behest of some friends of mine who use Patreon and have complained about leakers / public archivers hurting their business. Also, I couldn't sleep for \*\*\*\* one night and had to do something.
 
 ## Contact:
+
+For now, if you need help with setting up or using PAL, feel free to DM my Discord and I'll get back to you as soon as I can.
 
 [Github](https://github.com/Katyatu) - [Discord](https://discordapp.com/users/392501113611616267)
