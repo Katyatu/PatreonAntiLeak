@@ -86,9 +86,10 @@ Planned for <ins>PAL v1.1</ins>:
 
 **OS:** [Raspberry Pi OS Lite (64bit) - Debian 12](https://downloads.raspberrypi.com/raspios_lite_arm64/images/raspios_lite_arm64-2024-03-15/2024-03-15-raspios-bookworm-arm64-lite.img.xz)
 
-> [!TIP] 
-> Shopping Guide: [here](https://github.com/Katyatu/PatreonAntiLeak/wiki/Shopping-Guide)  
-> Setup Guide (wip): [here](https://github.com/Katyatu/PatreonAntiLeak/wiki/Raspberry-Pi-OS-Setup)
+> [!TIP]
+> If you're new to stuff like this, and/or don't have this specific setup, I made a couple guides to help you out:  
+> - Shopping Guide: [here](https://github.com/Katyatu/PatreonAntiLeak/wiki/Shopping-Guide)  
+> - RPiOS Setup Guide: [here](https://github.com/Katyatu/PatreonAntiLeak/wiki/Raspberry-Pi-OS-Setup)
 
 ## External Requirements:
 
