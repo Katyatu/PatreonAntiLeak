@@ -78,9 +78,9 @@ With the completion of <ins>PAL v1.0</ins>, I will be more focused on documentat
 Planned for <ins>PAL v1.1</ins>:
 
 - [ ] Add a new PAL-manager category 'Advanced Protection' containing:
-   - [ ] An option to separate encryption key from share link to break automated MEGA scraping
+   - [x] An option to separate encryption key from share link to break automated MEGA scraping
    - [ ] An operation to change encryption key of an instance's assigned folder
-   - [ ] An option to enable a random (-15 &#8804; x &#8804; +15) minute offset to the user specified refresh period
+   - [x] An option to enable a random (-15 &#8804; x &#8804; +15) minute offset to the user specified refresh period
 
 ## Targeted System Setup:
 
