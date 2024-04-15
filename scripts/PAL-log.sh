@@ -81,8 +81,6 @@ do
     printf "
 Here are the names of all your configured instances:
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 "
     ls -p $INSTALLDIR/instances | grep -v /
     read -p "

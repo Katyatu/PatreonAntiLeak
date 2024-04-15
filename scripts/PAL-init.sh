@@ -28,7 +28,6 @@ for name in $INSTALLDIR/instances/*; do
         
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 " > $TEMPDIR/$(basename $name).log
         $INSTALLDIR/control/PAL-instance.sh $path $hours $url $(basename $name) >> $TEMPDIR/$(basename $name).log &

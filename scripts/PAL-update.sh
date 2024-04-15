@@ -1,6 +1,6 @@
 #! /bin/bash
 
-PALVERSION="1.0"
+PALVERSION="1.1"
 
 ##################################
 #        Common Variables        #

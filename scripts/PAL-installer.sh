@@ -61,25 +61,27 @@ and run the command listed under \"Installing Required Dependancies\".
 fi
 
 read -p "Here is a rundown of everything that will be installed:
-~
-├── .config
-│   ├── PAL
-│   │   ├── control
+~/
+├── .config/
+│   ├── PAL/
+│   │   ├── control/
+│   │   │   ├── PAL-advprot.sh
 │   │   │   ├── PAL-create.sh
 │   │   │   ├── PAL-delete.sh
 │   │   │   ├── PAL-init.sh
 │   │   │   ├── PAL-instance.sh
 │   │   │   ├── PAL-kill.sh
 │   │   │   ├── PAL-log.sh
+│   │   │   ├── PAL-uninstaller.sh
 │   │   │   ├── PAL-update.sh
-│   │   │   └── PAL-uninstaller.sh
-│   │   └── instances
-│           └── messageIDs
-│   └── systemd
-│       └── user
+│   │   │   └── settings/
+│   │   └── instances/
+│           └── messageIDs/
+│   └── systemd/
+│       └── user/
 │           ├── MEGAcmd-autostart.service
 │           └── PAL-autostart.service
-└── bin
+└── bin/
     └── PAL-manager
 
 Do you wish to proceed with the installation of PAL? (y/N) " yn
@@ -100,20 +102,22 @@ case $yn in
         
 [3/7] Setting up internal folder structure ..."
         mkdir $INSTALLDIR/control
+        mkdir $INSTALLDIR/control/settings
         mkdir $INSTALLDIR/instances
         mkdir $INSTALLDIR/instances/messageIDs
 
         printf " Done!
         
 [4/7] Installing control scripts ..."
+        mv $INSTALLDIR/PAL-advprot.sh $INSTALLDIR/control
         mv $INSTALLDIR/PAL-create.sh $INSTALLDIR/control
         mv $INSTALLDIR/PAL-delete.sh $INSTALLDIR/control
         mv $INSTALLDIR/PAL-init.sh $INSTALLDIR/control
         mv $INSTALLDIR/PAL-instance.sh $INSTALLDIR/control
         mv $INSTALLDIR/PAL-kill.sh $INSTALLDIR/control
         mv $INSTALLDIR/PAL-log.sh $INSTALLDIR/control
-        mv $INSTALLDIR/PAL-update.sh $INSTALLDIR/control
         mv $INSTALLDIR/PAL-uninstaller.sh $INSTALLDIR/control
+        mv $INSTALLDIR/PAL-update.sh $INSTALLDIR/control
 
         printf " Done!
         

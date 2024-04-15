@@ -50,7 +50,7 @@ PatreonAntiLeak Protection of MEGA folder \"$MEGADRIVEPATH\" is running...
 
 Folder links will expire and be replaced every $HOURSTOWAIT hour(s).
 
-This script loops indefinitely, use PAK-manager to control instances.
+This script loops indefinitely, use PAL-manager to control instances.
 
 ======================================================================
 
@@ -82,9 +82,26 @@ This script loops indefinitely, use PAK-manager to control instances.
     fi
 
     ## Share link specific variables
-    EXPIREDATE=$(date -d "now + $HOURSTOWAIT hours")
-    MEGASHARELINK=$(mega-export -a -f $MEGADRIVEPATH | grep -oP 'http.?://\S+')
-    WEBHOOKMESSAGE="$MEGASHARELINK"
+    RANDOMINT=0
+    if [ -f $INSTALLDIR/control/settings/RANDOMINT ]; then
+        RANDOMINT=$(shuf -i 1-900 -n 1)
+        if [ $(shuf -i 1-2 -n 1) -eq 1 ]; then
+            RANDOMINT=-$RANDOMINT
+        fi
+        EXPIREDATE=$(date -d "now + $HOURSTOWAIT hours + $RANDOMINT seconds")
+    else
+        EXPIREDATE=$(date -d "now + $HOURSTOWAIT hours")
+    fi
+
+    MEGARESPONSE=$(mega-export -a -f $MEGADRIVEPATH)
+    MEGASHARELINK=$(echo $MEGARESPONSE | grep -oP 'http.?://\S+#')
+    MEGASHAREKEY=$(echo $MEGARESPONSE | grep -oP '#\K\S+')
+
+    if [ -f $INSTALLDIR/control/settings/SEPARATEKEY ]; then
+        WEBHOOKMESSAGE="$MEGASHARELINK"
+    else
+        WEBHOOKMESSAGE="$MEGASHARELINK$MEGASHAREKEY"
+    fi
 
     ## Editing the dedicated bot message with new share link
     curl -s --location --request PATCH "$WEBHOOKBOTURL/messages/$WEBHOOKMSGID" \
@@ -97,6 +114,10 @@ This script loops indefinitely, use PAK-manager to control instances.
 
 	$MEGASHARELINK
 
+Decryption Key:
+
+	$MEGASHAREKEY
+
 Expires on:
 
 	$EXPIREDATE
@@ -107,15 +128,14 @@ Webhook message ID:
 	
 ======================================================================
 
-Sleeping for $HOURSTOWAIT hour(s), gn zzz...
+Sleeping until $EXPIREDATE ...
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 "
 
     ## Sleeping for the requested time before looping back to start.
-    sleep $(($HOURSTOWAIT * 60 * 60))
+    sleep $(($HOURSTOWAIT * 60 * 60 + $RANDOMINT))
 
 done

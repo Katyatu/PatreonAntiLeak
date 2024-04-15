@@ -63,10 +63,10 @@ $(mega-whoami)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Re-initialize PAL or 'sudo reboot'
-after modifying instances. Changes 
-are not applied until after PAL is 
-fully restarted. This is intended
-as instances are not hot-swappable.
+after modifying any instances or
+settings. Instances are persistent,
+so changes are not applied until
+after PAL is fully restarted. 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 "
@@ -95,6 +95,8 @@ Control options:
 [1] Create an instance
 [2] Delete an instance
 
+[3] Advanced Protection
+
 [4] Re-initialize PAL (restart)
 [5] De-initialize PAL (stop)
 
@@ -116,6 +118,10 @@ What would you like to do? " choice
 
         # Launch the instance deletion script
         [2] ) $INSTALLDIR/control/PAL-delete.sh
+            ;;
+
+        # Launch the advaned protection script
+        [3] ) $INSTALLDIR/control/PAL-advprot.sh
             ;;
 
         # Kill all running instances and relaunch
