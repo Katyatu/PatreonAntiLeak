@@ -69,18 +69,19 @@ So, unless you are apart of the world's most famous Patreon creators where the i
 
 ## To Do:
 
-With the completion of <ins>PAL v1.0</ins>, I will be more focused on documentation so that anyone can use PAL with ease. Every digital artist deserves the ability to at least try to protect their work.
-
-- [ ] Walk-through guides & wiki
-- [ ] Example GIF
-- [ ] Idiot-proof & make everything zero knowledge user friendly
-
-Planned for <ins>PAL v1.1</ins>:
-
-- [ ] Add a new PAL-manager category 'Advanced Protection' containing:
-   - [x] An option to separate encryption key from share link to break automated MEGA scraping
-   - [ ] An operation to change encryption key of an instance's assigned folder
+<ins>PAL v1.1</ins> is released:
+- [x] Add a new PAL-manager category 'Advanced Protection' containing:
+   - [x] An option to separate decryption key from share link to break automated MEGA scraping
+   - [x] An operation to change decryption key of an instance's assigned folder
    - [x] An option to enable a random (-15 &#8804; x &#8804; +15) minute offset to the user specified refresh period
+     
+Documentation:
+- [ ] Walk-through guides & wiki
+   - [x] Shopping list
+   - [x] RPiOS setup
+   - [ ] PAL quickstart
+   - [ ] PAL in-depth
+- [ ] Example GIFs
 
 ## Targeted System Setup:
 
