@@ -6,6 +6,8 @@ This solution utilizes the cloud drive platform [MEGA](https://mega.io/), [Disco
 
 Until Patreon releases a public API where one could programmatically edit Patreon posts, Discord is a required middleman for now.
 
+![PAL-In-Action](/.github/resources/README/PAL-In-Action.gif)
+
 ## Methodology:
 
 > "In every chain of reasoning, the evidence of the last conclusion can be no greater than that of the weakest link of the chain, whatever may be the strength of the rest." - Thomas Reid's Essays on the Intellectual Powers of Man, 1786
@@ -82,7 +84,7 @@ Documentation:
   - [x] RPiOS setup
   - [x] PAL quickstart
   - [ ] PAL in-depth
-- [ ] Example GIFs
+- [x] Example GIFs
 
 ## Targeted System Setup:
 
