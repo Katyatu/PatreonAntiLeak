@@ -80,7 +80,7 @@ Documentation:
 - [ ] Walk-through guides & wiki
   - [x] Shopping list
   - [x] RPiOS setup
-  - [ ] PAL quickstart
+  - [x] PAL quickstart
   - [ ] PAL in-depth
 - [ ] Example GIFs
 
@@ -171,6 +171,9 @@ You have two ways to do this, pick one, both achieve the same result:
 #### Running
 
     PAL-manager
+
+> [!TIP]
+> There is a [PAL Quickstart Guide](https://github.com/Katyatu/PatreonAntiLeak/wiki/PAL-Quickstart-Guide) available if you need help with using PAL for the first time.
 
 <hr/>
 
