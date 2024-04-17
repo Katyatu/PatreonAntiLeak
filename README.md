@@ -1,4 +1,4 @@
-# ![PatreonAntiLeak](/.github/resources/PAL-Logo.png)
+# ![PatreonAntiLeak](/.github/resources/README/PAL-Logo.png)
 
 An attempt at curbing public archivers / leakers from allowing unauthorized access to digital work on Patreon (or any subscription based service) via means of data scraping / leaking URLs and publishing them without permission.
 
@@ -47,21 +47,21 @@ So, unless you are apart of the world's most famous Patreon creators where the i
 <details>
 <summary>Access to your Patreon content by default</summary>
 
-![Without-PAL](/.github/resources/Without-PAL.png)
+![Without-PAL](/.github/resources/README/Without-PAL.png)
 
 </details>
 
 <details>
 <summary>Access to your Patreon content under PAL's protection</summary>
 
-![With-PAL](/.github/resources/With-PAL.png)
+![With-PAL](/.github/resources/README/With-PAL.png)
 
 </details>
 
 <details>
 <summary>What PAL does when executed</summary>
 
-![PAL-Process](/.github/resources/PAL-Process.png)
+![PAL-Process](/.github/resources/README/PAL-Process.png)
 
 </details>
 </details>
