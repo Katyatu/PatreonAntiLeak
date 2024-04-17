@@ -1,4 +1,4 @@
-# ![PatreonAntiLeak](/resources/PAL-Logo.png)
+# ![PatreonAntiLeak](/.github/resources/PAL-Logo.png)
 
 An attempt at curbing public archivers / leakers from allowing unauthorized access to digital work on Patreon (or any subscription based service) via means of data scraping / leaking URLs and publishing them without permission.
 
@@ -19,7 +19,7 @@ A bank!
 - **PAL** serves as an automated system of rotating vault keys under the discretion of the bank manager.<br/>(ie. invalidating potentially leaked keys and keeping authorized key holders up-to-date with the latest key)
 
 <details>
-<summary align="right">Click here for more in-depth detail.</summary>
+<summary>Click here for more in-depth detail.</summary>
 <br/>
 Using this methodology, leaking URLs is rendered largely pointless, as any leaked URLs would be quickly invalidated per the set key rotation period.
 
@@ -34,35 +34,34 @@ So, by rotating keys in a frequent enough manner...
 
 An arbitrary example in order for a public archiver to keep up-to-date, in the time period of a week:
 
-| # of Accounts<br/>to Scrape | PAL Key Rotation<br/>Frequency | Total Scrapes / week | Total Time to Complete<br/>(10 scrapes / second) |                        Verdict                        |
-| :-------------------------: | :----------------------------: | :------------------: | :----------------------------------------------: | :---------------------------------------------------: |
-|           100,000           |         (unprotected)          |    100,000 / week    |                  10,000 seconds                  |          ~2.8 hours < 168 hours<br/>Feasible          |
-|           100,000           |           Every day            |    700,000 / week    |                  70,000 seconds                  |         ~19.4 hours < 168 hours<br/>Feasible          |
-|           100,000           |           Every hour           |  16,800,000 / week   |                1,680,000 seconds                 |    ~467 hours &#8816; 168 hours<br/>**Too costly**    |
+| # of Accounts<br/>to Scrape | PAL Key Rotation<br/>Frequency | Total Scrapes / week | Total Time to Complete<br/>(10 scrapes / second) |                     Verdict                     |
+| :-------------------------: | :----------------------------: | :------------------: | :----------------------------------------------: | :---------------------------------------------: |
+|           100,000           |         (unprotected)          |    100,000 / week    |                  10,000 seconds                  |       ~2.8 hours < 168 hours<br/>Feasible       |
+|           100,000           |           Every day            |    700,000 / week    |                  70,000 seconds                  |      ~19.4 hours < 168 hours<br/>Feasible       |
+|           100,000           |           Every hour           |  16,800,000 / week   |                1,680,000 seconds                 | ~467 hours &#8816; 168 hours<br/>**Too costly** |
 
 So, unless you are apart of the world's most famous Patreon creators where the incessant scraping is somehow financially worth it, public archiver leaks will always be outdated when PAL is deployed.
-
 
 ### Concept Flowcharts:
 
 <details>
 <summary>Access to your Patreon content by default</summary>
 
-![PatreonAntiLeak logo](/resources/Without-PAL.png)
+![Without-PAL](/.github/resources/Without-PAL.png)
 
 </details>
 
 <details>
 <summary>Access to your Patreon content under PAL's protection</summary>
 
-![PatreonAntiLeak logo](/resources/With-PAL.png)
+![With-PAL](/.github/resources/With-PAL.png)
 
 </details>
 
 <details>
 <summary>What PAL does when executed</summary>
 
-![PatreonAntiLeak logo](/resources/PAL-Process.png)
+![PAL-Process](/.github/resources/PAL-Process.png)
 
 </details>
 </details>
@@ -70,28 +69,31 @@ So, unless you are apart of the world's most famous Patreon creators where the i
 ## To Do:
 
 <ins>PAL v1.1</ins> is released:
+
 - [x] Add a new PAL-manager category 'Advanced Protection' containing:
-   - [x] An option to separate decryption key from share link to break automated MEGA scraping
-   - [x] An operation to change decryption key of an instance's assigned folder
-   - [x] An option to enable a random (-15 &#8804; x &#8804; +15) minute offset to the user specified refresh period
-     
+  - [x] An option to separate decryption key from share link to break automated MEGA scraping
+  - [x] An operation to change decryption key of an instance's assigned folder
+  - [x] An option to enable a random (-15 &#8804; x &#8804; +15) minute offset to the user specified refresh period
+
 Documentation:
+
 - [ ] Walk-through guides & wiki
-   - [x] Shopping list
-   - [x] RPiOS setup
-   - [ ] PAL quickstart
-   - [ ] PAL in-depth
+  - [x] Shopping list
+  - [x] RPiOS setup
+  - [ ] PAL quickstart
+  - [ ] PAL in-depth
 - [ ] Example GIFs
 
 ## Targeted System Setup:
 
-**Hardware:** [Raspberry Pi Zero 2 W](https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/) 
+**Hardware:** [Raspberry Pi Zero 2 W](https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/)
 
 **OS:** [Raspberry Pi OS Lite (64bit) - Debian 12](https://downloads.raspberrypi.com/raspios_lite_arm64/images/raspios_lite_arm64-2024-03-15/2024-03-15-raspios-bookworm-arm64-lite.img.xz)
 
 > [!TIP]
-> If you're new to stuff like this, and/or don't have this specific setup, I made a couple guides to help you out:  
-> - Shopping Guide: [here](https://github.com/Katyatu/PatreonAntiLeak/wiki/Shopping-Guide)  
+> If you're new to stuff like this, and/or don't have this specific setup, I made a couple guides to help you out:
+>
+> - Shopping Guide: [here](https://github.com/Katyatu/PatreonAntiLeak/wiki/Shopping-Guide)
 > - RPiOS Setup Guide: [here](https://github.com/Katyatu/PatreonAntiLeak/wiki/Raspberry-Pi-OS-Setup)
 
 ## External Requirements:
@@ -105,11 +107,13 @@ Documentation:
 > [!TIP]  
 > Free MEGA accounts start at 20GB, with up to 16TB paid storage.  
 > Pricing: [here](https://mega.io/pricing) | Privacy Policy: [here](https://tosdr.org/en/service/306)
+>
 > <hr/>
 >
-> An example of how a Discord server would set up the dedicated channels:  
-> - 'Tier 1' channel, that will contain a link (handled by PAL) to the 'Tier 1' folder on your MEGA drive.  
-> - 'Tier 2' channel, that will contain a link (handled by PAL) to the 'Tier 2' folder on your MEGA drive.  
+> An example of how a Discord server would set up the dedicated channels:
+>
+> - 'Tier 1' channel, that will contain a link (handled by PAL) to the 'Tier 1' folder on your MEGA drive.
+> - 'Tier 2' channel, that will contain a link (handled by PAL) to the 'Tier 2' folder on your MEGA drive.
 > - 'Tier \_' ... etc.
 > <hr/>
 >
@@ -194,18 +198,15 @@ If you happen to find yourself in a situation where you are unable to access the
 
 ## Disclaimer:
 
-> [!IMPORTANT]  
-> * PAL isn't designed to prevent piracy, ie. people who download from your vault and reupload to another distribution network. Conceptually speaking, it's impossible to prevent a 0-cost-infinitely-duplicatable digital good from being unlawfully distributed without having 100% complete control over people. The best you can do is making it as much of a pain in the ass as possible for illicit activity to take place, leaving only the "I'd rather die than pay you." people to spend the extra time out of their sad lives trying to circumvent your security. You'll just have to keep an eye out and file a DMCA Takedown if you catch wind of any file sharing site hosting your work without permission, and then purge the leaker from your Discord.
+> [!IMPORTANT]
 >
-> * Since PAL is written purely in GNU's Bourne Again SHell, modifying your local PAL installation is possible. However, any degree of modification voids your privilege of being able to open issues and/or complain. This repository will only be focused on the official version of PAL.
->   
-> * If you made a mod, have thoroughly tested it, and think it would serve as a respectable addition to the official PAL, you may post a feature request containing your code for me to review. Just don't get your hopes up.
->   
-> * There may be fringe cases where unexpected errors happen, I try my best to account for every possible scenario and handle them accordingly. If I happen to miss one, let me know and I'll get it fixed asap.
->   
-> * I am not affiliated with any of the services mentioned within this project whatsoever.
->   
-> * This project was born from the behest of some friends of mine who use Patreon and have complained about leakers / public archivers hurting their business. Also, I couldn't sleep for \*\*\*\* one night and had to do something.
+> - PAL isn't designed to prevent piracy, ie. people who download from your vault and reupload to another distribution network. Conceptually speaking, it's impossible to prevent a 0-cost-infinitely-duplicatable digital good from being unlawfully distributed without having 100% complete control over people. The best you can do is making it as much of a pain in the ass as possible for illicit activity to take place, leaving only the "I'd rather die than pay you." people to spend the extra time out of their sad lives trying to circumvent your security. You'll just have to keep an eye out and file a DMCA Takedown if you catch wind of any file sharing site hosting your work without permission, and then purge the leaker from your Discord.
+>
+> - Since PAL is written purely in GNU's Bourne Again SHell, modifying your local PAL installation is possible. However, any degree of modification voids your privilege of being able to open issues and/or complain. This repository will only be focused on the official version of PAL.
+> - If you made a mod, have thoroughly tested it, and think it would serve as a respectable addition to the official PAL, you may post a feature request containing your code for me to review. Just don't get your hopes up.
+> - There may be fringe cases where unexpected errors happen, I try my best to account for every possible scenario and handle them accordingly. If I happen to miss one, let me know and I'll get it fixed asap.
+> - I am not affiliated with any of the services mentioned within this project whatsoever.
+> - This project was born from the behest of some friends of mine who use Patreon and have complained about leakers / public archivers hurting their business. Also, I couldn't sleep for \*\*\*\* one night and had to do something.
 
 ## Contact:
 
