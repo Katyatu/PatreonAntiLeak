@@ -6,7 +6,7 @@ This solution utilizes the cloud drive platform [MEGA](https://mega.io/), [Disco
 
 Until Patreon releases a public API where one could programmatically edit Patreon posts, Discord is a required middleman for now.
 
-![PAL-In-Action](/.github/resources/README/PAL-In-Action.gif)
+![PAL-In-Action](/.github/resources/README/PAL-In-Action.png)
 
 ## Methodology:
 
