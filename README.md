@@ -68,23 +68,8 @@ So, unless you are apart of the world's most famous Patreon creators where the i
 </details>
 </details>
 
-## To Do:
-
-<ins>PAL v1.1</ins> is released:
-
-- [x] Add a new PAL-manager category 'Advanced Protection' containing:
-  - [x] An option to separate decryption key from share link to break automated MEGA scraping
-  - [x] An operation to change decryption key of an instance's assigned folder
-  - [x] An option to enable a random (-15 &#8804; x &#8804; +15) minute offset to the user specified refresh period
-
-Documentation:
-
-- [ ] Walk-through guides & wiki
-  - [x] Shopping list
-  - [x] RPiOS setup
-  - [x] PAL quickstart
-  - [ ] PAL in-depth
-- [x] Example GIFs
+<!-- ## To Do:
+- [ ] -->
 
 ## Targeted System Setup:
 
