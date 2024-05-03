@@ -2,7 +2,7 @@
 
 An attempt at curbing public archivers / leakers from allowing unauthorized access to digital work on Patreon (or any subscription based service) via means of data scraping / leaking URLs and publishing them without permission.
 
-This solution utilizes the cloud drive platform [MEGA](https://mega.io/), [Discord](https://discord.com/) for more control over access and booting scrapers, and my automation script, [PAL](https://github.com/Katyatu/PatreonAntiLeak), to keep shared URLs fresh to only those with active subscriptions & expiring old URLs that might have been compromised.
+This solution utilizes the cloud drive platform [MEGA](https://mega.io/), [Discord](https://discord.com/) for more control over access and booting scrapers, and [PAL](https://github.com/Katyatu/PatreonAntiLeak), to keep shared URLs fresh to only those with active subscriptions & expiring old URLs that might have been compromised.
 
 Until Patreon releases a public API where one could programmatically edit Patreon posts, Discord is a required middleman for now.
 
@@ -10,11 +10,9 @@ Until Patreon releases a public API where one could programmatically edit Patreo
 
 ## Methodology:
 
-> "In every chain of reasoning, the evidence of the last conclusion can be no greater than that of the weakest link of the chain, whatever may be the strength of the rest." - Thomas Reid's Essays on the Intellectual Powers of Man, 1786
+The idea of this project primarily revolves around the centuries old methodology of a one way in, one way out, guarded path that is protecting something of value.  
 
-Using the concept of "A chain is only as strong as its weakest link", in order to help preserve exclusive access of digital work to authorized users only, one must eliminate as many weak links (vulnerabilities, workarounds, etc.) as possible. In the case of protecting the distribution of digital work, the centuries old "one way in, one way out, the path protected by guards" method would be the best place to start. Naturally, the first thing that came to mind utilizing this approach is...
-
-A bank!
+Think of how a bank functions and apply those same concepts here:
 
 - **Discord** serves as the bank building with guards keeping an eye on activity, granting the ability to allow vault access to authorized customers, and removing anyone who jeopardizes vault security.
 - **MEGA** serves as the vault itself.
@@ -23,26 +21,26 @@ A bank!
 <details>
 <summary>Click here for more in-depth detail.</summary>
 <br/>
-Using this methodology, leaking URLs is rendered largely pointless, as any leaked URLs would be quickly invalidated per the set key rotation period.
+Using this methodology, leaking URLs is rendered largely pointless, as any leaked URLs would be quickly invalidated per the set key rotation period.<br/><br/>
 
-So, by rotating keys in a frequent enough manner...
+By rotating keys in a frequent enough manner:
 
-1. Discord admins have the ability to track down leaker accounts, and ban them for TOS violations while not having to issue a refund.
-2. Any human leakers would stop trying to leak as they would be required to sit at their computer 24/7 (even basement dwellers have limits).
-3. Any individual bot leakers would repeatedly risk exposing themselves violating TOS, eventually leading to a banned account via Discord admin investigation and no refund. Thus, discouraging any individual from repeated attempts as the cost alone to leak for free would **really** start to add up, on top of all prior efforts being wasted as URLs are regularly invalidated.
-   > **Note:**  
-   > This point is only valid if your tier pricing and frequency of pursuing leakers is set up in a way where the cost/risk isn't worth the reward in the event of being banned. It is advised you have trusted community members publically help you monitor internally and externally for leaker events.
+1. Discord admins have the ability to track down leaker accounts, and ban them for TOS violations.
+2. Any human leakers would stop trying to leak as they would be required to sit at their computer 24/7.
+3. Any individual bot leakers would repeatedly risk exposing themselves violating TOS, eventually leading to a banned account. Thus, discouraging any individual from repeated attempts as the cost alone to leak for free would **really** start to add up, on top of all prior efforts being wasted as URLs are regularly invalidated.
+
+   > Make the risk/reward skewed enough in your favor and get trusted community members to help keep an eye out for offenders.
 4. Any public archivers would have to increase their archiving visit frequency by many factors, which would require more server resources than any public achiever owner would want to invest in.
 
-An arbitrary example in order for a public archiver to keep up-to-date, in the time period of a week:
-
-| # of Accounts<br/>to Scrape | PAL Key Rotation<br/>Frequency | Total Scrapes / week | Total Time to Complete<br/>(10 scrapes / second) |                     Verdict                     |
-| :-------------------------: | :----------------------------: | :------------------: | :----------------------------------------------: | :---------------------------------------------: |
-|           100,000           |         (unprotected)          |    100,000 / week    |                  10,000 seconds                  |       ~2.8 hours < 168 hours<br/>Feasible       |
-|           100,000           |           Every day            |    700,000 / week    |                  70,000 seconds                  |      ~19.4 hours < 168 hours<br/>Feasible       |
-|           100,000           |           Every hour           |  16,800,000 / week   |                1,680,000 seconds                 | ~467 hours &#8816; 168 hours<br/>**Too costly** |
-
-So, unless you are apart of the world's most famous Patreon creators where the incessant scraping is somehow financially worth it, public archiver leaks will always be outdated when PAL is deployed.
+   An arbitrary example in order for a public archiver to keep up-to-date, in the time period of a week:
+   
+   | # of Accounts<br/>to Scrape | PAL Key Rotation<br/>Frequency | Total Scrapes / week | Total Time to Complete<br/>(10 scrapes / second) |                     Verdict                     |
+   | :-------------------------: | :----------------------------: | :------------------: | :----------------------------------------------: | :---------------------------------------------: |
+   |           100,000           |         (unprotected)          |    100,000 / week    |                  10,000 seconds                  |       ~2.8 hours < 168 hours<br/>Feasible       |
+   |           100,000           |           Every day            |    700,000 / week    |                  70,000 seconds                  |      ~19.4 hours < 168 hours<br/>Feasible       |
+   |           100,000           |           Every hour           |  16,800,000 / week   |                1,680,000 seconds                 | ~467 hours &#8816; 168 hours<br/>**Too costly** |
+   
+   So, unless you are apart of the world's most famous Patreon creators where the incessant scraping is somehow financially worth it, public archiver leaks will always be outdated when PAL is deployed.
 
 ### Concept Flowcharts:
 
@@ -89,7 +87,7 @@ So, unless you are apart of the world's most famous Patreon creators where the i
 
 2. A [Discord](https://discord.com/) server with dedicated channels that will serve as the gateway to your vault.
 
-3. A Discord Webhook Bot per dedicated channel inside of your Discord server, already created and assigned to the appropriate cooresponding channel.
+3. A Discord Webhook Bot per dedicated channel inside of your Discord server, already created and assigned to the appropriate corresponding channel.
 
 > [!TIP]  
 > Free MEGA accounts start at 20GB, with up to 16TB paid storage.  
@@ -190,7 +188,7 @@ If you happen to find yourself in a situation where you are unable to access the
 
 > [!IMPORTANT]
 >
-> - PAL isn't designed to prevent piracy, ie. people who download from your vault and reupload to another distribution network. Conceptually speaking, it's impossible to prevent a 0-cost-infinitely-duplicatable digital good from being unlawfully distributed without having 100% complete control over people. The best you can do is making it as much of a pain in the ass as possible for illicit activity to take place, leaving only the "I'd rather die than pay you." people to spend the extra time out of their sad lives trying to circumvent your security. You'll just have to keep an eye out and file a DMCA Takedown if you catch wind of any file sharing site hosting your work without permission, and then purge the leaker from your Discord.
+> - PAL isn't designed to prevent piracy, ie. people who download from your vault and re-upload to another distribution network. Conceptually speaking, it's impossible to prevent a 0-cost-infinitely-duplicatable digital good from being unlawfully distributed without having 100% complete control over people. The best you can do is making it as much of a pain in the ass as possible for illicit activity to take place, leaving only the "I'd rather die than pay you." people to spend the extra time out of their sad lives trying to circumvent your security. You'll just have to keep an eye out and file a DMCA Takedown if you catch wind of any file sharing site hosting your work without permission, and then purge the leaker from your Discord.
 >
 > - Since PAL is written purely in GNU's Bourne Again SHell, modifying your local PAL installation is possible. However, any degree of modification voids your privilege of being able to open issues and/or complain. This repository will only be focused on the official version of PAL.
 > - If you made a mod, have thoroughly tested it, and think it would serve as a respectable addition to the official PAL, you may post a feature request containing your code for me to review. Just don't get your hopes up.
